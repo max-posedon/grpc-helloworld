@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package helloworld;
+
+service Server {
+  rpc StreamCcu (Empty) returns (stream CcuReply) {}
+}
+
+message Empty{
+}
+
+message CcuReply {
+  int64 n = 1;
+}
